@@ -14,7 +14,15 @@ new Vue
         attachGreen: false,
         attachBlue: false,
         attachOrange: false,
-        colo: "orange"
+        colo: "orange",
+        condn: true,
+        persons: 
+        [
+            {"name": "Khanna", "age": 24, "occupation": "Jobless Khanna"},
+            {"name": "Khurana", "age": 34, "occupation": "Acting"},
+            {"name": "Karan", "age": 28, "occupation": "Labour"},
+            {"name": "Sasha", "age": 22, "occupation": "Nanny"}
+        ]
     },
     
     methods:
@@ -38,9 +46,12 @@ new Vue
         dummy(event)
         {
             event.stopPropagation();
+        },
+
+        condnChange()
+        {
+            this.condn = !this.condn;
         }
-
-
 
     },
 

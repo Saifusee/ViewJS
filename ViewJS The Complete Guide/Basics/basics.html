@@ -18,19 +18,36 @@
         <p>Hello There {{ name }},<br>
         Your provided address is <span class="address">  {{ Address }} </span>
         <p v-once> Your Address First time : {{ Address }} </p>
-
+            <div v-if="condn">
          <ul>
              <li><b>With Event Directive:</b>[Its changing constantly bcz there's no modifier applied on input field 1, so it changes as data in view instance changing]</li>
             <li><b>With Event Modifier Directive:</b>[Its chnaging its data on keyup of enter and spacebar as per its a key modifier applied on input 2]</li>
             <li><b>With Model Directive:</b>[Its changing its value with input 3 ]</li>
-            </ul>   
+            </ul>
+        </div>   
         </p>
         <p><a v-bind:href="link">Random link to Google.</a></p>
         <br><br>
 
+        <div v-for="(person,index) in persons">
 
-       <button @click="[Counter++, result()]">Increase</button>
-       <button @click="[Counter--, result()]">Decrease</button>
+            <ul>
+                <li>{{index}} : {{ person.name }} is {{ person.age }} year old, working as {{ person.occupation }}</li>
+            </ul>
+        </div>
+<br><br>
+        <div v-for="(person,index) in persons">
+            <div v-for="(object_elements, object_key, object_index) in person">
+            <ul>
+                <li><span style="background-color: coral;">{{index}}</span> (Index of object in Array) : <span style="background-color: coral;">{{object_elements}}</span> (Element in Object) / <span style="background-color: coral;">{{ object_key }}</span> (Key Value of each element of Object) / <span style="background-color: coral;">{{object_index}}</span> (Index of each element inside object) </li>
+            </ul>
+        </div>
+        </div>
+        
+        <br><br>
+       <button @click="Counter++">Increase</button>
+       <button @click="Counter--">Decrease</button>
+       <button @click="condnChange()">If condition check</button>
        <button @click="hover($event)">Coordinate <span @click="dummy">Checker</span> <span @click.stop>Button</span></button>
 
        <br><br>
