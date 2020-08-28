@@ -1,4 +1,4 @@
-new Vue
+let v1 = new Vue
 ({
     el: "#inp",
 
@@ -77,3 +77,4 @@ new Vue
         }
     }
 })
+

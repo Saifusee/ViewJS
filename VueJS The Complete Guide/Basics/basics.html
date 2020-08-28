@@ -9,8 +9,8 @@
     <script src="vue.js"></script>
 </head>
 <body>
-    
     <div id="inp">
+
         <input type="text" placeholder="Your Address 1" v-on:keyup="showInputAddress($event)" >
         <input type="text" placeholder="Your Address 2" v-on:keyup.enter.space="showInputAddress($event)" >
         <input type="text" placeholder="Your Address 3" v-model="Address" >
@@ -64,10 +64,8 @@
 <div class="demo" @click="attachRed = !attachRed" :class="color"></div><br>
 Type Blue/Green/Orange/Red: <input type="text" v-model="colo"><br>
 <div class="demo" :class="colo"></div><br>
-
     </div>
-
-
+    <hr><hr> <hr><hr> <hr>
     <script src="basics.js"></script>
 </body>
 </html>
